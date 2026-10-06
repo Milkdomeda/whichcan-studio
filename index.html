@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./styles.css" />
     <script type="module" src="./viewer.js"></script>
     <title>WhichCAN Studio｜从需求到 3D 设计</title>
-  </head>
+  <link rel="stylesheet" href="./language.css"><script type="module" src="./language.mjs"></script></head>
   <body>
     <a class="skip-link" href="#main">跳到主要内容</a>
     <header class="site-header">
@@ -41,7 +41,7 @@
         <div class="hero-visual model-panel" aria-label="四篮球手提架真实三维设计模型">
           <div class="visual-meta"><span>真实 3D CAD 模型</span><span>01 / 01</span></div>
           <div class="model-stage" id="model-stage" aria-describedby="model-status model-hint">
-            <p class="model-status" id="model-status" role="status">正在加载真实三维模型…</p>
+            <p class="model-status" id="model-status" role="status" data-dynamic-language>正在加载真实三维模型…</p>
           </div>
           <div class="viewer-toolbar" aria-label="三维模型视角控制">
             <p id="model-hint">拖动旋转 · 滚轮或双指缩放</p>
