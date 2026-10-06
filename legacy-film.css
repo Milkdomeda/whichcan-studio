@@ -14,4 +14,9 @@ main{position:relative;isolation:isolate;display:grid}
 .site-header,.site-footer{position:relative;z-index:2;background:#f5f3eb}
 
 /* Soften the film photographs without dimming foreground content. */
-.case-wall img{filter:brightness(.82)}
+.case-wall img{filter:brightness(.65)}
+
+/* Opaque header spans edge to edge; contents retain their original gutters. */
+.site-header{width:100%;margin-inline:0;padding-inline:max(48px,calc((100% - 1440px)/2))}
+@media(max-width:900px){.site-header{width:100%;padding-inline:max(24px,calc((100% - 720px)/2))}}
+@media(max-width:560px){.site-header{width:100%;padding-inline:18px}}
