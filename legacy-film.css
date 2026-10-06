@@ -20,3 +20,7 @@ main{position:relative;isolation:isolate;display:grid}
 .site-header{width:100%;margin-inline:0;padding-inline:max(48px,calc((100% - 1440px)/2))}
 @media(max-width:900px){.site-header{width:100%;padding-inline:max(24px,calc((100% - 720px)/2))}}
 @media(max-width:560px){.site-header{width:100%;padding-inline:18px}}
+
+/* Product-family introduction. */
+.family-primary{padding:28px;margin-top:36px;background:#f5f3eb;border-radius:10px}.family-primary h3,.family-grid h3{font-size:20px;line-height:1.5;margin:0 0 16px}.family-primary p,.family-grid p{font-size:16px;line-height:1.85;margin:0;color:#365548}.family-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:24px}.family-grid article{min-width:0;padding:24px;background:#f5f3eb;border-radius:10px}.status-copy,.family-primary,.family-grid{overflow-wrap:break-word}@media(max-width:900px){.family-grid{grid-template-columns:1fr}.status-layout{grid-template-columns:1fr;gap:24px}}@media(max-width:560px){.family-primary,.family-grid article{padding:20px}.family-primary h3,.family-grid h3{font-size:18px}}
+.status-copy p+p{margin-top:16px}
