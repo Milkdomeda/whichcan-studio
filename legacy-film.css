@@ -12,3 +12,6 @@ main{position:relative;isolation:isolate;display:grid}
 @media(max-width:560px){.film-background{margin:0}.hero-copy,.process-section .section-heading{padding:18px}.process-list li{padding:16px}.hero h1{font-size:clamp(36px,10vw,48px)}}
 
 .site-header,.site-footer{position:relative;z-index:2;background:#f5f3eb}
+
+/* Soften the film photographs without dimming foreground content. */
+.case-wall img{filter:brightness(.82)}
