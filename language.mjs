@@ -1,4 +1,4 @@
-import { english } from './translations.mjs';
+import { english, caseEnglish } from './translations.mjs';
 const key = 'whichcan-introduction-language';
 let language = 'zh';
 try { if (localStorage.getItem(key) === 'en') language = 'en'; } catch {}
@@ -21,7 +21,7 @@ function render() {
       let source = originals.get(node);
       if (!source) { source = {}; originals.set(node, source); }
       source[attribute] ??= node.getAttribute(attribute);
-      node.setAttribute(attribute, translate(source[attribute]));
+      node.setAttribute(attribute, attribute === 'alt' && node.dataset.caseId && language === 'en' ? (caseEnglish[node.dataset.caseId] ?? translate(source[attribute])) : translate(source[attribute]));
     }
   });
   document.querySelector('meta[property="og:locale"]')?.setAttribute('content', language === 'en' ? 'en_US' : 'zh_CN');

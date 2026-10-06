@@ -1,0 +1,12 @@
+/* Foreground integration only. Film frames/grid come directly from WC-0039 styles.css. */
+main{position:relative;isolation:isolate;display:grid}
+.introduction-content,.film-background{grid-area:1/1;min-width:0}
+.introduction-content{position:relative;z-index:1;pointer-events:none}
+.introduction-content>*{pointer-events:auto}
+.film-background{position:relative;z-index:0;margin:0;padding:0;pointer-events:none;align-self:stretch}
+.case-wall{min-height:100%;align-content:space-between}
+.hero-copy{background:#f5f3eb;padding:24px;border-radius:10px}
+.process-section .section-heading{background:#f5f3eb;padding:24px;border-radius:10px}
+.process-list li{background:#f5f3eb;padding:24px;border-radius:0 0 8px 8px}
+.case-section,.status-section{position:relative}
+@media(max-width:560px){.film-background{margin:0}.hero-copy,.process-section .section-heading{padding:18px}.process-list li{padding:16px}.hero h1{font-size:clamp(36px,10vw,48px)}}

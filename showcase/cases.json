@@ -1,0 +1,152 @@
+[
+  {
+    "case_id": "carrier",
+    "title": "四篮球手提架",
+    "image": "images/carrier.png"
+  },
+  {
+    "case_id": "pen",
+    "title": "七槽笔筒",
+    "image": "images/pen.png"
+  },
+  {
+    "case_id": "normal",
+    "title": "沥水皂盒",
+    "image": "images/normal.png"
+  },
+  {
+    "case_id": "box",
+    "title": "收纳盒",
+    "image": "images/box.png"
+  },
+  {
+    "case_id": "vase",
+    "title": "花瓶",
+    "image": "images/vase.png"
+  },
+  {
+    "case_id": "ornament",
+    "title": "抽象桌面摆件",
+    "image": "images/ornament.png"
+  },
+  {
+    "case_id": "desk-clamp",
+    "title": "耳机与手柄桌夹",
+    "image": "images/desk-clamp.png"
+  },
+  {
+    "case_id": "basketball",
+    "title": "一体篮球架",
+    "image": "images/basketball.png"
+  },
+  {
+    "case_id": "multi-pen",
+    "title": "多件笔筒",
+    "image": "images/multi-pen.png"
+  },
+  {
+    "case_id": "egg-rack-1",
+    "title": "鸡蛋架样本 1",
+    "image": "images/egg-rack-1.png"
+  },
+  {
+    "case_id": "egg-rack-3",
+    "title": "鸡蛋架样本 3",
+    "image": "images/egg-rack-3.png"
+  },
+  {
+    "case_id": "egg-rack-4",
+    "title": "鸡蛋架样本 4",
+    "image": "images/egg-rack-4.png"
+  },
+  {
+    "case_id": "egg-rack-5",
+    "title": "鸡蛋架样本 5",
+    "image": "images/egg-rack-5.png"
+  },
+  {
+    "case_id": "petal-1",
+    "title": "花瓣笔筒 1",
+    "image": "images/petal-1.png"
+  },
+  {
+    "case_id": "petal-2",
+    "title": "花瓣笔筒 2",
+    "image": "images/petal-2.png"
+  },
+  {
+    "case_id": "petal-3",
+    "title": "花瓣笔筒 3",
+    "image": "images/petal-3.png"
+  },
+  {
+    "case_id": "petal-4",
+    "title": "花瓣笔筒 4",
+    "image": "images/petal-4.png"
+  },
+  {
+    "case_id": "soap-1",
+    "title": "皂盒方案 1",
+    "image": "images/soap-1.png"
+  },
+  {
+    "case_id": "soap-2",
+    "title": "皂盒方案 2",
+    "image": "images/soap-2.png"
+  },
+  {
+    "case_id": "soap-3",
+    "title": "皂盒方案 3",
+    "image": "images/soap-3.png"
+  },
+  {
+    "case_id": "frame-1",
+    "title": "框架方案 1",
+    "image": "images/frame-1.png"
+  },
+  {
+    "case_id": "frame-2",
+    "title": "框架方案 2",
+    "image": "images/frame-2.png"
+  },
+  {
+    "case_id": "frame-3",
+    "title": "框架方案 3",
+    "image": "images/frame-3.png"
+  },
+  {
+    "case_id": "frame-4",
+    "title": "框架方案 4",
+    "image": "images/frame-4.png"
+  },
+  {
+    "case_id": "frame-5",
+    "title": "框架方案 5",
+    "image": "images/frame-5.png"
+  },
+  {
+    "case_id": "frame-6",
+    "title": "框架方案 6",
+    "image": "images/frame-6.png"
+  },
+  {
+    "case_id": "pyramid-1",
+    "title": "金字塔鸡蛋架 1",
+    "image": "images/pyramid-1.png"
+  },
+  {
+    "case_id": "pyramid-2",
+    "title": "金字塔鸡蛋架 2",
+    "image": "images/pyramid-2.png"
+  },
+  {
+    "case_id": "pyramid-3",
+    "title": "金字塔鸡蛋架 3",
+    "image": "images/pyramid-3.png"
+  },
+  {
+    "case_id": "pyramid-4",
+    "title": "金字塔鸡蛋架 4",
+    "image": "images/pyramid-4.png"
+  }
+]
