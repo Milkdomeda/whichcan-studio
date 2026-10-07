@@ -173,3 +173,5 @@ Object.assign(english, {"从日常需要开始，探索面向 3D 打印的产品
 Object.assign(english, {"WhichCAN Studio｜面向 3D 打印的产品设计":"WhichCAN Studio | Product designs for 3D printing","变成贴合需要的产品。":"into a product shaped around your needs."});
 
 Object.assign(english, {"产品族目录与设计知识可以持续维护和扩展。通过更新产品族定义、整理和发布可复用的设计知识，WhichCAN Studio 可以逐步支持更多类型的产品。": "The product-family catalog and design knowledge can be maintained and extended over time. Updating family definitions and curating and publishing reusable design knowledge allows WhichCAN Studio to gradually support more types of products."});
+
+Object.assign(english, {'二级产品族':'Secondary product families','上一个产品族':'Previous product family','下一个产品族':'Next product family','轮播':'carousel'});

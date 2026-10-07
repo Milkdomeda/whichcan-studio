@@ -24,3 +24,16 @@ main{position:relative;isolation:isolate;display:grid}
 /* Product-family introduction. */
 .family-primary{padding:28px;margin-top:36px;background:#f5f3eb;border-radius:10px}.family-primary h3,.family-grid h3{font-size:20px;line-height:1.5;margin:0 0 16px}.family-primary p,.family-grid p{font-size:16px;line-height:1.85;margin:0;color:#365548}.family-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:24px}.family-grid article{min-width:0;padding:24px;background:#f5f3eb;border-radius:10px}.status-copy,.family-primary,.family-grid{overflow-wrap:break-word}@media(max-width:900px){.family-grid{grid-template-columns:1fr}.status-layout{grid-template-columns:1fr;gap:24px}}@media(max-width:560px){.family-primary,.family-grid article{padding:20px}.family-primary h3,.family-grid h3{font-size:18px}}
 .status-copy p+p{margin-top:16px}
+
+/* One category at a time; arrows stay outside the clipped sliding viewport. */
+.family-carousel{margin-top:28px}
+.family-slider{display:grid;grid-template-columns:48px minmax(0,680px) 48px;justify-content:center;align-items:center;gap:16px}
+.family-window{overflow:hidden;min-width:0;border-radius:10px}
+.family-carousel .family-grid{display:flex;gap:0;margin:0;transition:transform .35s ease}
+.family-carousel .family-grid article{flex:0 0 100%;box-sizing:border-box;margin:0}
+.family-arrow{width:48px;height:48px;border:1px solid #365548;border-radius:50%;background:#f5f3eb;color:#203e30;font-size:24px;cursor:pointer}
+.family-arrow:focus-visible{outline:3px solid #365548;outline-offset:4px}
+.family-arrow:disabled{opacity:.45;cursor:default}
+.family-position{text-align:center;font-size:14px;margin:16px 0 0;color:#365548}
+@media(max-width:560px){.family-slider{grid-template-columns:36px minmax(0,1fr) 36px;gap:8px}.family-arrow{width:36px;height:44px;font-size:20px}.family-carousel .family-grid article{padding:18px}}
+@media(prefers-reduced-motion:reduce){.family-carousel .family-grid{transition:none}}
