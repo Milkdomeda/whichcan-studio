@@ -37,3 +37,23 @@ main{position:relative;isolation:isolate;display:grid}
 .family-position{text-align:center;font-size:14px;margin:16px 0 0;color:#365548}
 @media(max-width:560px){.family-slider{grid-template-columns:36px minmax(0,1fr) 36px;gap:8px}.family-arrow{width:36px;height:44px;font-size:20px}.family-carousel .family-grid article{padding:18px}}
 @media(prefers-reduced-motion:reduce){.family-carousel .family-grid{transition:none}}
+
+/* Frosted liquid-glass category surface, with a readable fallback. */
+.family-carousel .family-window{
+  position:relative;border-radius:24px;border:1px solid rgba(255,255,255,.72);
+  background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(235,248,236,.54) 48%,rgba(255,255,255,.38));
+  box-shadow:0 18px 34px -20px rgba(17,52,37,.45),0 5px 12px -6px rgba(17,52,37,.22),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.48);
+}
+.family-carousel .family-window::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(125deg,rgba(255,255,255,.42),transparent 34%,transparent 68%,rgba(255,255,255,.15));
+  box-shadow:inset 1px 1px 1px rgba(255,255,255,.85),inset -1px -1px 1px rgba(255,255,255,.35);
+}
+.family-carousel .family-grid article{position:relative;background:transparent;border-radius:24px;padding:32px}
+.family-carousel .family-grid h3,.family-carousel .family-grid p{position:relative;z-index:2;color:#203e30}
+.family-carousel .family-arrow{border-color:rgba(255,255,255,.85);background:linear-gradient(135deg,rgba(255,255,255,.84),rgba(243,250,241,.55));box-shadow:0 6px 12px -7px rgba(17,52,37,.4),inset 0 1px 0 #fff}
+@supports ((backdrop-filter:blur(16px)) or (-webkit-backdrop-filter:blur(16px))){
+  .family-carousel .family-window{background:linear-gradient(135deg,rgba(255,255,255,.6),rgba(235,248,236,.4) 48%,rgba(255,255,255,.3));backdrop-filter:blur(16px) saturate(125%);-webkit-backdrop-filter:blur(16px) saturate(125%)}
+}
+@media(max-width:560px){.family-carousel .family-grid article{padding:20px}.family-carousel .family-window,.family-carousel .family-grid article{border-radius:20px}}
+@media(forced-colors:active){.family-carousel .family-window,.family-carousel .family-arrow{background:Canvas;border:1px solid CanvasText;box-shadow:none}.family-carousel .family-window::after{display:none}.family-carousel .family-grid h3,.family-carousel .family-grid p{color:CanvasText}}
