@@ -1,4 +1,3 @@
-import {startCaseFeed} from './case-feed.mjs';
 import { english, caseEnglish } from './translations.mjs';
 const key = 'whichcan-introduction-language';
 let language = 'zh';
@@ -82,6 +81,3 @@ for (const carousel of document.querySelectorAll('.family-carousel')) {
   window.addEventListener('whichcan-language-change', () => show(index));
   show(0);
 }
-
-const wall=document.querySelector('.case-wall');
-if(wall)startCaseFeed({wall,url:new URL('./showcase/cases.json',location.href).href,language:currentLanguage,english:caseEnglish});
