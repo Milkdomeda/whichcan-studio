@@ -1,7 +1,10 @@
+import {startCaseFeed} from './case-feed.mjs';
 import { english, caseEnglish } from './translations.mjs';
 const key = 'whichcan-introduction-language';
 let language = 'zh';
-try { if (localStorage.getItem(key) === 'en') language = 'en'; } catch {}
+const entryLanguage = new URLSearchParams(location.search).get('lang');
+if (entryLanguage === 'en' || entryLanguage === 'zh') language = entryLanguage;
+else { try { if (localStorage.getItem(key) === 'en') language = 'en'; } catch {} }
 export const currentLanguage = () => language;
 export const translate = text => language === 'en' ? (english[text] ?? text) : text;
 const originals = new WeakMap();
@@ -30,6 +33,8 @@ function render() {
 export function setLanguage(value) {
   language = value === 'en' ? 'en' : 'zh';
   try { localStorage.setItem(key, language); } catch {}
+  const localized = new URL(location.href); localized.searchParams.set('lang', language);
+  history.replaceState(history.state, '', localized);
   render();
   window.dispatchEvent(new Event('whichcan-language-change'));
 }
@@ -77,3 +82,6 @@ for (const carousel of document.querySelectorAll('.family-carousel')) {
   window.addEventListener('whichcan-language-change', () => show(index));
   show(0);
 }
+
+const wall=document.querySelector('.case-wall');
+if(wall)startCaseFeed({wall,url:new URL('./showcase/cases.json',location.href).href,language:currentLanguage,english:caseEnglish});
