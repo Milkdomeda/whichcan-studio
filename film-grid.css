@@ -1,4 +1,4 @@
-/* The fixed original 30 frames fit the viewport; foreground may cover them. */
+/* Eighteen semantic frames; one inline atlas, six columns on every viewport. */
 .film-background,
 .reviewed-home .film-background {
   position: fixed;
@@ -13,13 +13,16 @@
   width: 100%;
   height: 100%;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
   gap: 4px 0;
   padding: 0;
   align-content: stretch;
 }
 :is(.film-background, .reviewed-home .film-background) .case-wall figure {
   display: grid;
+  place-items: center;
+  position: relative;
+  container-type: size;
   min-width: 0;
   min-height: 0;
   margin: 0;
@@ -29,6 +32,9 @@
 }
 :is(.film-background, .reviewed-home .film-background) .case-wall figure::before,
 :is(.film-background, .reviewed-home .film-background) .case-wall figure::after {
+  content: "";
+  position: absolute;
+  opacity: .85;
   left: 5px;
   right: 5px;
   height: 5px;
@@ -36,21 +42,18 @@
 }
 :is(.film-background, .reviewed-home .film-background) .case-wall figure::before { top: 3px; }
 :is(.film-background, .reviewed-home .film-background) .case-wall figure::after { bottom: 3px; }
-:is(.film-background, .reviewed-home .film-background) .case-wall img {
+:is(.film-background, .reviewed-home .film-background) .film-image {
   display: block;
-  min-width: 0;
-  min-height: 0;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: auto;
-  object-fit: contain;
+  width: min(100cqw, calc(100cqh * 9 / 7));
+  aspect-ratio: 9 / 7;
+  background-image: var(--film-atlas);
+  background-size: 600% 300%;
+  background-repeat: no-repeat;
+  background-color: #eef2f0;
+  border-radius: 2px;
+  filter: brightness(.65);
 }
 @media (max-width: 700px) {
-  :is(.film-background, .reviewed-home .film-background) .case-wall {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(10, minmax(0, 1fr));
-    gap: 3px 0;
-  }
   :is(.film-background, .reviewed-home .film-background) .case-wall figure { padding: 9px 3px; }
   :is(.film-background, .reviewed-home .film-background) .case-wall figure::before,
   :is(.film-background, .reviewed-home .film-background) .case-wall figure::after {
