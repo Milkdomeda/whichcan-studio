@@ -1,4 +1,4 @@
-/* Eighteen semantic frames; one inline atlas, six columns on every viewport. */
+/* Eighteen frames; atlas coordinates stay fixed while the viewport grid adapts. */
 .film-background,
 .reviewed-home .film-background {
   position: fixed;
@@ -7,6 +7,9 @@
   padding: 0;
   overflow: hidden;
   pointer-events: none;
+  box-sizing: border-box;
+  height: 100%;
+  height: 100dvh;
 }
 :is(.film-background, .reviewed-home .film-background) .case-wall {
   display: grid;
@@ -14,7 +17,7 @@
   height: 100%;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   grid-template-rows: repeat(3, minmax(0, 1fr));
-  gap: 4px 0;
+  gap: clamp(2px, .5vmin, 5px) 0;
   padding: 0;
   align-content: stretch;
 }
@@ -26,7 +29,7 @@
   min-width: 0;
   min-height: 0;
   margin: 0;
-  padding: 12px 5px;
+  padding: clamp(7px, 1.3vmin, 12px) clamp(2px, .45vmin, 5px);
   background: #24382e;
   overflow: hidden;
 }
@@ -53,8 +56,14 @@
   border-radius: 2px;
   filter: brightness(.65);
 }
+/* Includes portrait phones/tablets and narrow windows, without device sniffing. */
+@media (orientation: portrait) {
+  :is(.film-background, .reviewed-home .film-background) .case-wall {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+  }
+}
 @media (max-width: 700px) {
-  :is(.film-background, .reviewed-home .film-background) .case-wall figure { padding: 9px 3px; }
   :is(.film-background, .reviewed-home .film-background) .case-wall figure::before,
   :is(.film-background, .reviewed-home .film-background) .case-wall figure::after {
     left: 3px;
